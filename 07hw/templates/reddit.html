@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h3>Got data from: {{ redditName }}</h3>
+</div>
+{% for post in posts %}
+    Post: <a href="{{ 'https://reddit.com' + post.data.permalink }}" target="_blank">{{ post.data.title }}</a><br>
+    Image: <a href="{{ post.data.thumbnail }}" target="_blank">{{ post.data.thumbnail }}</a>
+    <br>
+    <br>
+{% endfor %}
+</body>
+</html>
